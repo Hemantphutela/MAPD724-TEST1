@@ -15,6 +15,9 @@
 		414BE59B221F6E40006E9A5C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 414BE599221F6E40006E9A5C /* Main.storyboard */; };
 		414BE59D221F6E42006E9A5C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 414BE59C221F6E42006E9A5C /* Assets.xcassets */; };
 		414BE5A0221F6E42006E9A5C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 414BE59E221F6E42006E9A5C /* LaunchScreen.storyboard */; };
+		414BE5AA221F78B3006E9A5C /* Starfield.sks in Resources */ = {isa = PBXBuildFile; fileRef = 414BE5A9221F78B3006E9A5C /* Starfield.sks */; };
+		414BE5AE221F8976006E9A5C /* SplashScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 414BE5AD221F8976006E9A5C /* SplashScene.sks */; };
+		414BE5B0221F89C1006E9A5C /* SplashScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 414BE5AF221F89C1006E9A5C /* SplashScene.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +31,9 @@
 		414BE59C221F6E42006E9A5C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		414BE59F221F6E42006E9A5C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		414BE5A1221F6E42006E9A5C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		414BE5A9221F78B3006E9A5C /* Starfield.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Starfield.sks; sourceTree = "<group>"; };
+		414BE5AD221F8976006E9A5C /* SplashScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = SplashScene.sks; sourceTree = "<group>"; };
+		414BE5AF221F89C1006E9A5C /* SplashScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScene.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +75,9 @@
 				414BE59C221F6E42006E9A5C /* Assets.xcassets */,
 				414BE59E221F6E42006E9A5C /* LaunchScreen.storyboard */,
 				414BE5A1221F6E42006E9A5C /* Info.plist */,
+				414BE5A9221F78B3006E9A5C /* Starfield.sks */,
+				414BE5AD221F8976006E9A5C /* SplashScene.sks */,
+				414BE5AF221F89C1006E9A5C /* SplashScene.swift */,
 			);
 			path = "MAPD724-TEST1";
 			sourceTree = "<group>";
@@ -131,10 +140,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				414BE5AA221F78B3006E9A5C /* Starfield.sks in Resources */,
 				414BE59B221F6E40006E9A5C /* Main.storyboard in Resources */,
 				414BE592221F6E40006E9A5C /* GameScene.sks in Resources */,
 				414BE59D221F6E42006E9A5C /* Assets.xcassets in Resources */,
 				414BE5A0221F6E42006E9A5C /* LaunchScreen.storyboard in Resources */,
+				414BE5AE221F8976006E9A5C /* SplashScene.sks in Resources */,
 				414BE594221F6E40006E9A5C /* Actions.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -147,6 +158,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				414BE596221F6E40006E9A5C /* GameScene.swift in Sources */,
+				414BE5B0221F89C1006E9A5C /* SplashScene.swift in Sources */,
 				414BE598221F6E40006E9A5C /* GameViewController.swift in Sources */,
 				414BE590221F6E40006E9A5C /* AppDelegate.swift in Sources */,
 			);
