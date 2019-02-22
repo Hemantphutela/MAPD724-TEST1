@@ -72,6 +72,8 @@ class GameScene: SKScene {
                 //spinImage3node.texture = SKTexture(imageNamed: "Grape")
                
                 
+            } else if nodesArray.first?.name == "quitButton"{
+                exit(0)
             }
     
     

@@ -23,17 +23,32 @@ class SplashScene: SKScene {
     
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        
+        //for t in touches { self.touchDown(atPoint: t.location(in: self)) }
         let touch = touches.first
         if let location = touch?.location(in: self){
-            let nodesArray = self.nodes(at: location)
+        let nodesArray = self.nodes(at: location)
+       // ScoreManager.Lives = 5
+       // ScoreManager.Score = 0
+        
+        if let view = self.view {
+            if let scene = SKScene(fileNamed: "GameScene") {
+                scene.scaleMode = .aspectFit
+                view.presentScene(scene)
+            }
+        }
+        //let touch = touches.first
+        //if let location = touch?.location(in: self){
+            //let nodesArray = self.nodes(at: location)
             
-            if nodesArray.first?.name == "logoButton"{
-                let transition = SKTransition.flipHorizontal(withDuration: 0.5)
-                let gameScene = GameScene(size: self.size)
-                self.view?.presentScene(gameScene, transition: transition)
+            //if nodesArray.first?.name == "logoButton"{
+                //let transition = SKTransition.flipHorizontal(withDuration: 0.5)
+                //let gameScene = GameScene(size: self.size)
+               // self.view?.presentScene(gameScene, transition: transition)
                 
             }
 
 }
-}
+
+
 }
