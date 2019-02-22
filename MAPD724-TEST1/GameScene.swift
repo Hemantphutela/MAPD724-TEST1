@@ -12,6 +12,8 @@ import GameplayKit
 //var starfield:SKEmitterNode!
 var background = SKSpriteNode(imageNamed: "background")
 var spinButtonnode:SKSpriteNode!
+var resetButtonnode:SKSpriteNode!
+var quitButtonnode:SKSpriteNode!
 
 class GameScene: SKScene {
     override func didMove(to view: SKView) {
@@ -21,9 +23,16 @@ class GameScene: SKScene {
         addChild(background)
        
         
-        spinButtonnode = self.childNode(withName: "spinButton") as? SKSpriteNode
+      spinButtonnode = self.childNode(withName: "spinButton") as? SKSpriteNode
+      quitButtonnode = self.childNode(withName: "quitButton") as? SKSpriteNode
+        resetButtonnode = self.childNode(withName: "resetButton") as? SKSpriteNode
+       
         
-       // spinButtonnode.texture = SKTexture(imageNamed: "Cherry")
+        
+       spinButtonnode.texture = SKTexture(imageNamed: "Spin")
+        resetButtonnode.texture = SKTexture(imageNamed: "Reset")
+        quitButtonnode.texture = SKTexture(imageNamed: "quit")
+        
 }
 
 }
