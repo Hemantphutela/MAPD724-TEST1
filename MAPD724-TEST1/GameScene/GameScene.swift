@@ -38,10 +38,10 @@ class GameScene: SKScene {
         Credit.BetLabel.position.x = 0
         Credit.BetLabel.position.y = -330
         
-        Credit.BetLabel.fontColor = UIColor.yellow
+        Credit.BetLabel.fontColor = UIColor.red
         Credit.BetLabel.fontSize = 60.0
         Credit.BetLabel.zPosition = 3
-        Credit.BetLabel.fontName = "Arial Bold"
+        Credit.BetLabel.fontName = "Serif"
         Credit.Bet = 1
         
         Credit.BetLabel.name = "bet"
@@ -54,7 +54,7 @@ class GameScene: SKScene {
         Credit.CreditsLabel.fontColor = UIColor.red
         Credit.CreditsLabel.fontSize = 60.0
         Credit.CreditsLabel.zPosition = 3
-        Credit.CreditsLabel.fontName = "Arial"
+        Credit.CreditsLabel.fontName = "Serif"
         Credit.Credit = 100
         
         Credit.CreditsLabel.name = "credit"
@@ -64,10 +64,10 @@ class GameScene: SKScene {
         Credit.WinLabel.position.x = 180
         Credit.WinLabel.position.y = -330
         
-        Credit.WinLabel.fontColor = UIColor.red
+        Credit.WinLabel.fontColor = UIColor.green
         Credit.WinLabel.fontSize = 60.0
         Credit.WinLabel.zPosition = 3
-        Credit.WinLabel.fontName = "Arial"
+        Credit.WinLabel.fontName = "Serif"
         Credit.Win = 0
         Credit.WinLabel.name = "win"
         
@@ -77,10 +77,10 @@ class GameScene: SKScene {
         Credit.UserLabel.position.x = 0
         Credit.UserLabel.position.y = 460
         
-        Credit.UserLabel.fontColor = UIColor.red
+        Credit.UserLabel.fontColor = UIColor.green
         Credit.UserLabel.fontSize = 40.0
         Credit.UserLabel.zPosition = 3
-        Credit.UserLabel.fontName = "Arial"
+        Credit.UserLabel.fontName = "Serif"
         Credit.UserLabel.name = "user"
         
         
@@ -88,28 +88,28 @@ class GameScene: SKScene {
         addChild(Credit.UserLabel)
         
         
-        Credit.PlusLabel.position.x = -20
-        Credit.PlusLabel.position.y = -420
+        Credit.PlusLabel.position.x = -40
+        Credit.PlusLabel.position.y = -440
         
         Credit.PlusLabel.fontColor = UIColor.black
         Credit.PlusLabel.fontSize = 70.0
         Credit.PlusLabel.zPosition = 3
-        Credit.PlusLabel.fontName = "Arial"
+        Credit.PlusLabel.fontName = "Serif"
         Credit.PlusLabel.name = "PlusLabel"
         
-        Credit.PlusLabel.name = "plus"
+        Credit.PlusLabel.name = "plusButton"
         
         addChild(Credit.PlusLabel)
         
-        Credit.MinusLabel.position.x = 20
-        Credit.MinusLabel.position.y = -420
+        Credit.MinusLabel.position.x = 40
+        Credit.MinusLabel.position.y = -440
         
         Credit.MinusLabel.fontColor = UIColor.black
         Credit.MinusLabel.fontSize = 70.0
         Credit.MinusLabel.zPosition = 3
-        Credit.MinusLabel.fontName = "Arial"
+        Credit.MinusLabel.fontName = "Serif"
         Credit.MinusLabel.name = "MinusLabel"
-        Credit.MinusLabel.name = "minus"
+        Credit.MinusLabel.name = "minusButton"
         
         addChild(Credit.MinusLabel)
         
@@ -167,8 +167,9 @@ class GameScene: SKScene {
                 }
                 else
                 {
-                    Credit.User = "You Lose! Try Again"
+                    Credit.User = "You Lose!"
                     Credit.Win = 0
+                    
                 }
                 
                 if(Credit.Bet > 0 && Credit.Credit > 0){
@@ -178,6 +179,25 @@ class GameScene: SKScene {
                 
             } else if nodesArray.first?.name == "quitButton"{
                 exit(0)
+            }  else if nodesArray.first?.name  == "resetButton" {
+                // Call the function here.
+                Credit.Bet = 1
+                Credit.Credit = 100
+                Credit.Win = 0
+                Credit.User = ""
+                
+            }else if nodesArray.first?.name  == "plusButton" {
+                // Call the function here.
+                if(Credit.Bet<Credit.Credit)    {
+                    Credit.Bet = Credit.Bet + 1
+                }
+            }
+                
+            else if nodesArray.first?.name == "minusButton" {
+                // Call the function here.
+                if(Credit.Bet>1)    {
+                    Credit.Bet = Credit.Bet - 1
+                }
             }
     
     
