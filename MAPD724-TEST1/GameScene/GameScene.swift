@@ -41,7 +41,7 @@ class GameScene: SKScene {
         Credit.BetLabel.fontColor = UIColor.red
         Credit.BetLabel.fontSize = 60.0
         Credit.BetLabel.zPosition = 3
-        Credit.BetLabel.fontName = "Serif"
+        Credit.BetLabel.fontName = "Arial"
         Credit.Bet = 1
         
         Credit.BetLabel.name = "bet"
@@ -54,7 +54,7 @@ class GameScene: SKScene {
         Credit.CreditsLabel.fontColor = UIColor.red
         Credit.CreditsLabel.fontSize = 60.0
         Credit.CreditsLabel.zPosition = 3
-        Credit.CreditsLabel.fontName = "Serif"
+        Credit.CreditsLabel.fontName = "Arial"
         Credit.Credit = 100
         
         Credit.CreditsLabel.name = "credit"
@@ -67,7 +67,7 @@ class GameScene: SKScene {
         Credit.WinLabel.fontColor = UIColor.green
         Credit.WinLabel.fontSize = 60.0
         Credit.WinLabel.zPosition = 3
-        Credit.WinLabel.fontName = "Serif"
+        Credit.WinLabel.fontName = "Arial"
         Credit.Win = 0
         Credit.WinLabel.name = "win"
         
@@ -80,7 +80,7 @@ class GameScene: SKScene {
         Credit.UserLabel.fontColor = UIColor.green
         Credit.UserLabel.fontSize = 40.0
         Credit.UserLabel.zPosition = 3
-        Credit.UserLabel.fontName = "Serif"
+        Credit.UserLabel.fontName = "Arial"
         Credit.UserLabel.name = "user"
         
         
@@ -94,7 +94,7 @@ class GameScene: SKScene {
         Credit.PlusLabel.fontColor = UIColor.black
         Credit.PlusLabel.fontSize = 70.0
         Credit.PlusLabel.zPosition = 3
-        Credit.PlusLabel.fontName = "Serif"
+        Credit.PlusLabel.fontName = "Arial"
         Credit.PlusLabel.name = "PlusLabel"
         
         Credit.PlusLabel.name = "plusButton"
@@ -107,7 +107,7 @@ class GameScene: SKScene {
         Credit.MinusLabel.fontColor = UIColor.black
         Credit.MinusLabel.fontSize = 70.0
         Credit.MinusLabel.zPosition = 3
-        Credit.MinusLabel.fontName = "Serif"
+        Credit.MinusLabel.fontName = "Arial"
         Credit.MinusLabel.name = "MinusLabel"
         Credit.MinusLabel.name = "minusButton"
         
@@ -162,8 +162,8 @@ class GameScene: SKScene {
                 if (spinImage1node.texture == spinImage2node.texture && spinImage2node.texture == spinImage3node.texture){
                     
                     Credit.User = "You Won"
-                    Credit.Win = 10 * Credit.Credit
-                    Credit.Credit = 10 * Credit.Credit
+                    Credit.Win = 2 * Credit.Bet
+                    Credit.Credit =  2 * Credit.Credit
                 }
                 else
                 {
